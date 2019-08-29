@@ -1,0 +1,86 @@
+<!-- <button *ngIf="!showAddForm" (click)="toggleAddForm()">Add Person</button>
+
+<form
+  *ngIf="showAddForm"
+  #addForm="ngForm"
+  (ngSubmit)="[handlePost(addForm)]"
+>
+  <h1>Add A New Item!!!</h1>
+  <input type="text"name="product" ngModel placeholder="product">
+  <input type="number"name="id" ngModel  placeholder="id">
+  <input type="number"name="price" ngModel placeholder="price">
+  <input type="number"name="quantity" ngModel placeholder="quantity">
+  <button>Add Item</button>
+</form>
+
+<form *ngIf="showEditForm" #editForm="ngForm" (ngSubmit)="[handlePut(editForm)]">
+  <h1>Edit An Item!!!</h1>
+  <input type="text"name="product" [ngModel]="itemToEdit.product" placeholder="product">
+  <input type="number"name="id" [ngModel]="itemToEdit.id" placeholder="id">
+  <input type="number"name="price" [ngModel]="itemToEdit.price" placeholder="price">
+  <input type="number"name="quantity" [ngModel]="itemToEdit.quantity" placeholder="quantity">
+  <button>Edit Item</button>
+</form>
+
+<div *ngFor="let item of cartItems; index as i">
+  <p>Product: {{ item.product }}</p>
+  <p>ID: {{ item.id }}</p>
+  <p>Price: {{ item.price }}</p>
+  <p>Quantity: {{ item.quantity }}</p>
+  <button (click)="handleDelete(item.id)">Delete</button>
+  <button (click)="[setItemToEdit(item), toggleEditForm()]">Edit</button>
+</div> -->
+
+
+<button *ngIf="!showAddForm" (click)="toggleAddForm()">Add Person</button>
+<main>
+ <form
+   *ngIf="showAddForm"
+   #addForm="ngForm"
+   (ngSubmit)="[handlePost(addForm)]"
+ >
+   <h1>Sell Your Item!</h1>
+   <input type="text" name="product" ngModel placeholder="product" />
+   <input type="number" name="id" ngModel placeholder="id" />
+   <input type="number" name="price" ngModel placeholder="price" />
+   <input type="number" name="quantity" ngModel placeholder="quantity" />
+   <button>Add Item</button>
+ </form>
+ <form
+   *ngIf="showEditForm"
+   #editForm="ngForm"
+   (ngSubmit)="[handlePut(editForm)]"
+ >
+   <h1>Edit An Item!</h1>
+   <input
+     type="text"
+     name="product"
+     [ngModel]="itemToEdit.product"
+     placeholder="product"
+   />
+   <input type="number" name="id" [ngModel]="itemToEdit.id" placeholder="id" />
+   <input
+     type="number"
+     name="price"
+     [ngModel]="itemToEdit.price"
+     placeholder="price"
+   />
+   <input
+     type="number"
+     name="quantity"
+     [ngModel]="itemToEdit.quantity"
+     placeholder="quantity"
+   />
+   <button>Edit Item</button>
+ </form>
+ <div *ngFor="let item of cartItems; index as i">
+   <div class="items-2">
+     <p>Product: {{ item.product }}</p>
+     <p>ID: {{ item.id }}</p>
+     <p>Price: {{ item.price }}</p>
+     <p>Quantity: {{ item.quantity }}</p>
+     <button (click)="handleDelete(item.id)">Delete</button>
+     <button (click)="[setItemToEdit(item), toggleEditForm()]">Edit</button>
+   </div>
+ </div>
+</main>

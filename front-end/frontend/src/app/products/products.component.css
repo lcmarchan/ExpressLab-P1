@@ -1,0 +1,30 @@
+/* h1 {
+    display: flex;
+    color: kevin;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: kevin;
+
+
+}
+
+
+div {
+    display: flex;
+    flex-direction: row;
+    color: green;
+} */
+
+
+ 
+ h1 {
+    color: white;
+ }
+ p {
+    color: white;
+    font-size: 20px;
+ }
+ 
